@@ -87,14 +87,14 @@ const FormToAddEditAchievementOption: FC<IPropsAddEditAchievementTempData> = (
     LoadAchievementOptionDocumentationTemplateVariables
   >(LOAD_ACHIEVEMENT_OPTION_DOCUMENTATION_TEMPLATE, {
     variables: { path: props.defaultData.documentationTemplateUrl },
-    skip: props.defaultData.documentationTemplateUrl.trim().length === 0,
+    skip: props.defaultData.documentationTemplateUrl?.trim().length === 0,
   });
   const loadAchievementOptionEvaluationScript = useAdminQuery<
     LoadAchievementOptionEvaluationScript,
     LoadAchievementOptionEvaluationScriptVariables
   >(LOAD_ACHIEVEMENT_OPTION_EVALUATION_SCRIPT, {
     variables: { path: props.defaultData.evaluationScriptUrl },
-    skip: props.defaultData.evaluationScriptUrl.trim().length === 0,
+    skip: props.defaultData.evaluationScriptUrl?.trim().length === 0,
   });
   useEffect(() => {
     if (
